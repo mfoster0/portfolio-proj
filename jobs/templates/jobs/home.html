@@ -2,12 +2,13 @@
 <!doctype html>
 <html lang="en">
   <head>
+    {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
-    <title>Album example · Bootstrap</title>
+    <title>Django Mark Foster</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/album/">
 
@@ -19,7 +20,7 @@
 <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
 <link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
 <link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+<!--link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico"-->
 <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#563d7c">
 
@@ -46,15 +47,15 @@
   <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Mark Foster</a>
+            <a class="navbar-brand" href="{% url 'home' %}">Mark Foster</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav ml-auto">
                 <a class="nav-item nav-link " href="#">Twitter </a>
-                <a class="nav-item nav-link" href="#">Resume</a>
-                <a class="nav-item nav-link" href="#">Blog</a>
+                <a class="nav-item nav-link" href="{% static 'portfolio/mfoster0419.docx' %}" />>Resume</a>
+                <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
                 <!--a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true"-->Disabled</a>
               </div>
             </div>
@@ -71,6 +72,8 @@
         <a href="mailto:mark.foster@live.co.uk" class="btn btn-primary my-2">Email Me</a>
         <!--a href="#" class="btn btn-secondary my-2">Secondary action</a-->
       </p>
+      
+      <img class="img-fluid" src="{% static 'portfolio/den.jpg' %}" height=200 width=200/>
     </div>
   </section>
 

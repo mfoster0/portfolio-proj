@@ -1,6 +1,15 @@
 ## the only way i could get django version above 1.x was to follow the instructions at: https://www.digitalocean.com/community/tutorials/how-to-install-django-and-set-up-a-development-environment-on-ubuntu-16-04
 
-Django==2.1.5
+#Django==2.1.5
+#Pillow==7.1.1
+#psycopg2-binary==2.8.5
+#pytz==2019.3
+
+#below taken from digital ocean virtual env
+asgiref==3.2.7
+Django==3.0.5
 Pillow==7.1.1
 psycopg2-binary==2.8.5
 pytz==2019.3
+sqlparse==0.3.1
+
